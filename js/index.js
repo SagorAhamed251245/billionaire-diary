@@ -1,8 +1,8 @@
 let allData=[];
 
 const loadData = () => {
-    const url = `https://raw.githubusercontent.com/hridoyfahad30/billionaires-api/main/api.json?fbclid=IwAR1U4SlFq3AN8ALOKFtNEGIQJWYhulVHIm2jNGsNEKUHjMKkAWxxAQz9rxw`
-    // const url = 'https://forbes400.onrender.com/api/forbes400?limit=10'
+    // const url = `https://raw.githubusercontent.com/hridoyfahad30/billionaires-api/main/api.json?fbclid=IwAR1U4SlFq3AN8ALOKFtNEGIQJWYhulVHIm2jNGsNEKUHjMKkAWxxAQz9rxw`
+    const url = 'https://forbes400.onrender.com/api/forbes400'
     fetch(url)
         .then(res => res.json())
         .then(data => ShowAllBillionaires(data))
