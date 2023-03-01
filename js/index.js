@@ -9,6 +9,7 @@ const loadData = () => {
 }
 
 const ShowAllBillionaires = (data) => {
+    console.log(data)
     allData=data;
     const cardParent = document.getElementById('card-parent')
     cardParent.innerHTML='';
@@ -61,7 +62,7 @@ const loadMillionaireDetails= rank=>{
 
 
     
-    modalBody.innerHTML += `
+    modalBody.innerHTML= `
     <div id="card-parent" class="row row-cols-1 row-cols-md-1  p-2">
     <div class="col">
         <div class="card h-auto w-100 d-flex flex-row">
