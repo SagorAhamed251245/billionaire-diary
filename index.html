@@ -11,9 +11,9 @@
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="">
 
-    <main class="w-100 d-flex h-100 text-white">
+    <main class="w-100 d-flex  text-white">
         <!-- navBar start -->
         <section id="side-nav" class="pb-5">
             <div class="text-center my-5">
@@ -26,15 +26,22 @@
                     <button class="btn btn-primary fw-bolder w-75 mx-auto">Double Money</button>
                     <button class="btn btn-primary fw-bolder w-75 mx-auto">Sort By Rank</button>
                     <button class="btn btn-primary fw-bolder w-75 mx-auto">Calculate Entire Wealth</button>
-                    <button class="btn btn-primary fw-bolder w-75 mx-auto">Show All Billionaires</button>
+                    <button onclick="loadData()" class="btn btn-primary fw-bolder w-75 mx-auto">Show All
+                        Billionaires</button>
                     <button class="btn btn-primary fw-bolder w-75 mx-auto">Richest by industry</button>
                     <button class="btn btn-primary fw-bolder w-75 mx-auto">Richest by states</button>
+                    <button onclick="loadYoungestData()" class="btn btn-primary fw-bolder w-75 mx-auto">Richest by
+                        Youngest</button>
                 </div>
 
             </section>
 
         </section>
+
         <!-- navBar end -->
+        <section>
+
+        </section>
         <!-- main section start  -->
         <section id="main-section" class="">
             <header>
@@ -54,11 +61,13 @@
             <!-- card section  -->
             <section class="text-black">
 
+
                 <div id="card-parent" class="row row-cols-1 row-cols-md-2 g-4 p-2">
                     <div class="col">
                         <div class="card h-auto w-100 d-flex flex-row">
-                            <div class=" d-flex align-items-center bg-dark w-50 rounded-4" >
-                                <img src="./images/reference-img-worlds-of-adventure-park-4-1920x9999.jpg" class="img-fluid rounded " alt="...">
+                            <div class=" d-flex align-items-center bg-dark w-50 rounded-4">
+                                <img src="./images/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
+                                    class="img-fluid rounded " alt="...">
                             </div>
                             <div class="card-body w-50">
                                 <h5 class="card-title">Card title</h5>
@@ -67,8 +76,8 @@
                             </div>
                         </div>
                     </div>
-                    
-            
+
+
                 </div>
 
 
@@ -76,15 +85,69 @@
 
             </section>
 
+            <!-- loading  -->
+            <section class="d-flex align-items-center justify-content-center d-none">
+                <div class="spinner-border text-dark" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </section>
+
         </section>
 
         <!-- main section end  -->
+
     </main>
+    <!-- modal start -->
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="millionaireDetailsModal" tabindex="-1"
+            aria-labelledby="millionaireDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="millionaireDetailsModalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- modal body  -->
+                    <div id="modal-body" class="modal-body">
+                        <div id="card-parent" class="row row-cols-1 row-cols-md-1  p-2">
+                            <div class="col">
+                                <div class="card h-auto w-100 d-flex flex-row">
+                                    <div class=" d-flex align-items-center bg-dark w-50 rounded-4">
+                                        <img src="./images/reference-img-worlds-of-adventure-park-4-1920x9999.jpg"
+                                            class="img-fluid rounded " alt="...">
+                                    </div>
+                                    <div class="card-body w-50">
+                                        <h5 class="card-title">Card title</h5>
+                                        <p class="card-text">This is a longer card with supporting text below as a
+                                            natural
+                                            lead-in to additional content. This content is a little bit longer.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- modal end -->
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="js/index.js"></script>
+    <script src="js/youngest.js"></script>
 
 </body>
 
